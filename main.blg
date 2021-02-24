@@ -1,58 +1,46 @@
-This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
-The style file: IEEEtran.bst
-I found no \citation commands---while reading file main.aux
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
+The style file: ieeetr.bst
 Database file #1: main.bib
--- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
--- http://www.michaelshell.org/tex/ieeetran/bibtex/
--- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
-
-Done.
-You've used 0 entries,
-            4087 wiz_defined-function locations,
-            820 strings with 7277 characters,
-and the built_in function-call counts, 104 in all, are:
-= -- 0
-> -- 0
+You've used 4 entries,
+            1876 wiz_defined-function locations,
+            502 strings with 4156 characters,
+and the built_in function-call counts, 857 in all, are:
+= -- 78
+> -- 33
 < -- 0
-+ -- 0
-- -- 0
-* -- 19
-:= -- 27
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
++ -- 13
+- -- 9
+* -- 52
+:= -- 130
+add.period$ -- 6
+call.type$ -- 4
+change.case$ -- 3
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 3
+cite$ -- 4
+duplicate$ -- 44
+empty$ -- 96
+format.name$ -- 9
+if$ -- 208
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 23
-num.names$ -- 0
-pop$ -- 0
+int.to.str$ -- 4
+missing$ -- 4
+newline$ -- 17
+num.names$ -- 4
+pop$ -- 22
 preamble$ -- 1
 purify$ -- 0
-quote$ -- 2
-skip$ -- 1
+quote$ -- 0
+skip$ -- 21
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 32
+swap$ -- 11
 text.length$ -- 0
 text.prefix$ -- 0
-top$ -- 5
+top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 22
-(There was 1 error message)
+while$ -- 7
+width$ -- 5
+write$ -- 40
