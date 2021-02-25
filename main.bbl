@@ -18,4 +18,10 @@ F2b, ``{BitDNS and Generalizing Bitcoin}.''
   \url{https://bitcointalk.org/index.php?topic=1790.0/}, 2010.
 \newblock [Online; accessed 25-Feb-2021].
 
+\bibitem{leiner2009brief}
+B.~M. Leiner, V.~G. Cerf, D.~D. Clark, R.~E. Kahn, L.~Kleinrock, D.~C. Lynch,
+  J.~Postel, L.~G. Roberts, and S.~Wolff, ``A brief history of the internet,''
+  {\em ACM SIGCOMM Computer Communication Review}, vol.~39, no.~5, pp.~22--31,
+  2009.
+
 \end{thebibliography}

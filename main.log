@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.2.24)  25 FEB 2021 04:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.2.24)  25 FEB 2021 18:47
 entering extended mode
 **d:/Desktop/Vivian/vivian-paper/main.tex
 (d:/Desktop/Vivian/vivian-paper/main.tex
@@ -345,19 +345,27 @@ Package caption Info: End \AtBeginDocument code.
  [0
 
 
-{C:/Users/tianx/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] (d:/Desktop\Vivian\vivian-paper\sections/introduction.tex) (d:/Desktop\Vivian\vivian-paper\main.bbl
+{C:/Users/tianx/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] (d:/Desktop\Vivian\vivian-paper\sections/introduction.tex
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 10.
+ (D:\cache\latex\tex/latex/psnfss\ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 10.
+ (D:\cache\latex\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
+ (D:\cache\latex\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)) [1
+
+
+] (d:/Desktop\Vivian\vivian-paper\main.bbl
 Underfull \hbox (badness 3884) in paragraph at lines 12--15
 []\OT1/ptm/m/n/8 H. A. Kalod-ner, M. Carl-sten, P. El-len-bo-gen, J. Bon-neau, and
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
-(D:\cache\latex\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
- (D:\cache\latex\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -370,26 +378,23 @@ Before submitting the final camera ready copy, remember to:
  process uses the appropriate paper size.
 
 - LAST -
-Extra skip:5.81778pt
-Left:305.89993pt/2.16492pt
-Right:300.51514pt/1.73193pt
-Output:304.20753pt
-[1
-
-
-] (d:/Desktop\Vivian\vivian-paper\main.aux) ) 
+Extra skip:23.84999pt
+Left:80.84999pt/1.73193pt
+Right:57.0pt/1.73193pt
+Output:80.42499pt
+[2] (d:/Desktop\Vivian\vivian-paper\main.aux) ) 
 Here is how much of TeX's memory you used:
- 6209 strings out of 479334
- 95265 string characters out of 2871244
- 411083 words of memory out of 3000000
- 23592 multiletter control sequences out of 15000+200000
- 441419 words of font info for 95 fonts, out of 3000000 for 9000
+ 6254 strings out of 479334
+ 95845 string characters out of 2871244
+ 405086 words of memory out of 3000000
+ 23630 multiletter control sequences out of 15000+200000
+ 445651 words of font info for 105 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,8n,77p,379b,365s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/cache/latex/fonts/enc/dvips/base/8r.enc}<D:/cache/latex/fonts/type1/urw/times/utmb8a.pfb><D:/cache/latex/fonts/type1/urw/times/utmbi8a.pfb><D:/cache/latex/fonts/type1/urw/times/utmr8a.pfb><D:/cache/latex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on d:/Desktop\Vivian\vivian-paper\main.pdf (2 pages, 59303 bytes).
+ 69i,8n,77p,456b,280s stack positions out of 5000i,500n,10000p,200000b,50000s
+{D:/cache/latex/fonts/enc/dvips/base/8r.enc}<D:/cache/latex/fonts/type1/urw/courier/ucrr8a.pfb><D:/cache/latex/fonts/type1/urw/times/utmb8a.pfb><D:/cache/latex/fonts/type1/urw/times/utmbi8a.pfb><D:/cache/latex/fonts/type1/urw/times/utmr8a.pfb><D:/cache/latex/fonts/type1/urw/times/utmri8a.pfb>
+Output written on d:/Desktop\Vivian\vivian-paper\main.pdf (3 pages, 70968 bytes).
 PDF statistics:
- 26 PDF objects out of 1000 (max. 8388607)
+ 33 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
