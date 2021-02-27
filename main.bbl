@@ -1,0 +1,67 @@
+\begin{thebibliography}{10}
+
+\bibitem{Sunyaev2020}
+A.~Sunyaev, {\em Distributed Ledger Technology}, pp.~265--299.
+\newblock Cham: Springer International Publishing, 2020.
+
+\bibitem{nakamoto2008peer}
+S.~Nakamoto and A.~Bitcoin, ``A peer-to-peer electronic cash system,'' {\em
+  Bitcoin.--URL: https://bitcoin. org/bitcoin. pdf}, vol.~4, 2008.
+
+\bibitem{kalodner2015empirical}
+H.~A. Kalodner, M.~Carlsten, P.~Ellenbogen, J.~Bonneau, and A.~Narayanan, ``An
+  empirical study of namecoin and lessons for decentralized namespace
+  design.,'' in {\em WEIS}, Citeseer, 2015.
+
+\bibitem{merited2010bitdns}
+F2b, ``{BitDNS and Generalizing Bitcoin}.''
+  \url{https://bitcointalk.org/index.php?topic=1790.0/}, 2010.
+\newblock [Online; accessed 25-Feb-2021].
+
+\bibitem{leiner2009brief}
+B.~M. Leiner, V.~G. Cerf, D.~D. Clark, R.~E. Kahn, L.~Kleinrock, D.~C. Lynch,
+  J.~Postel, L.~G. Roberts, and S.~Wolff, ``A brief history of the internet,''
+  {\em ACM SIGCOMM Computer Communication Review}, vol.~39, no.~5, pp.~22--31,
+  2009.
+
+\bibitem{Postel1994DomainNS}
+J.~Postel, ``Domain name system structure and delegation,'' {\em RFC},
+  vol.~1591, 1994.
+
+\bibitem{mcguire2002attack}
+D.~McGuire and B.~Krebs, ``Attack on internet called largest ever,'' {\em The
+  Washington Post}, vol.~22, 2002.
+
+\bibitem{rosenblatt_2013}
+S.~Rosenblatt, ``Fake turkish site certs create threat of bogus google sites.''
+  \url{https://www.cnet.com/news/fake-turkish-site-certs-create-threat-of-bogus-google-sites/},
+  Jan 2013.
+\newblock [Online; accessed 27-Feb-2021].
+
+\bibitem{6978614}
+Z.~{Zhang}, M.~C.~Y. {Cho}, C.~{Wang}, C.~{Hsu}, C.~{Chen}, and S.~{Shieh},
+  ``Iot security: Ongoing challenges and research opportunities,'' in {\em 2014
+  IEEE 7th International Conference on Service-Oriented Computing and
+  Applications}, pp.~230--234, 2014.
+
+\bibitem{statista_2021}
+S.~R. Department, ``Internet of things - active connections worldwide
+  2015-2025.''
+  \url{https://www.statista.com/statistics/1101442/iot-number-of-connected-devices-worldwide/},
+  Jan 2021.
+\newblock [Online; accessed 28-Feb-2021].
+
+\bibitem{Farahani2020TheCO}
+B.~Farahani, F.~Firouzi, and M.~L{\"u}cking, ``The convergence of iot and
+  distributed ledger technologies (dlt): Opportunities, challenges, and
+  solutions,'' {\em Journal of Network and Computer Applications}, p.~102936,
+  2020.
+
+\bibitem{10.1145/2976749.2978341}
+A.~Gervais, G.~O. Karame, K.~W\"{u}st, V.~Glykantzis, H.~Ritzdorf, and
+  S.~Capkun, ``On the security and performance of proof of work blockchains,''
+  in {\em Proceedings of the 2016 ACM SIGSAC Conference on Computer and
+  Communications Security}, CCS '16, (New York, NY, USA), p.~3–16,
+  Association for Computing Machinery, 2016.
+
+\end{thebibliography}
