@@ -97,4 +97,38 @@ J.~Buchmann and J.~Ding, {\em Post-Quantum Cryptography: Second International
   vol.~5299.
 \newblock Springer Science \& Business Media, 2008.
 
+\bibitem{swartz_2011}
+A.~Swartz, ``Squaring the triangle: Secure, decentralized, human-readable
+  names.'' \url{http://www.aaronsw.com/weblog/squarezooko}, Jan 2011.
+\newblock [Online; accessed 1-Mar-2021].
+
+\bibitem{wilcox2001names}
+Z.~Wilcox-O’Hearn, ``Names: Distributed, secure, human-readable: Choose
+  two,'' 2001.
+
+\bibitem{ali2017blockstack}
+M.~Ali, R.~Shea, J.~Nelson, and M.~J. Freedman, ``Blockstack technical
+  whitepaper,'' {\em Blockstack PBC, October}, vol.~12, 2017.
+
+\bibitem{nelson2016extending}
+J.~Nelson, M.~Ali, R.~Shea, and M.~J. Freedman, ``Extending existing
+  blockchains with virtualchain,'' in {\em Workshop on Distributed
+  Cryptocurrencies and Consensus Ledgers}, 2016.
+
+\bibitem{ali2016blockstack}
+M.~Ali, J.~Nelson, R.~Shea, and M.~J. Freedman, ``Blockstack: A global naming
+  and storage system secured by blockchains,'' in {\em 2016 $\{$USENIX$\}$
+  annual technical conference ($\{$USENIX$\}$$\{$ATC$\}$ 16)}, pp.~181--194,
+  2016.
+
+\bibitem{990434}
+R.~{Schollmeier}, ``A definition of peer-to-peer networking for the
+  classification of peer-to-peer architectures and applications,'' in {\em
+  Proceedings First International Conference on Peer-to-Peer Computing},
+  pp.~101--102, 2001.
+
+\bibitem{nemat2011taking}
+R.~Nemat, ``Taking a look at different types of e-commerce,'' {\em World
+  Applied Programming}, vol.~1, no.~2, pp.~100--104, 2011.
+
 \end{thebibliography}
