@@ -1,19 +1,19 @@
 \section{Introduction}
 \label{sec:introduction}
 
-A distributed ledger is a type of distributed database which tolerates nodes with malicious intentions in the system.
+A distributed ledger is a database which tolerates nodes with malicious intentions in a distributed manner.
 And distributed ledger technology (DLT) enables the realization and operation of distributed ledgers,
-which allows benign nodes, to agree on an almost immutable record of transactions with Byzantine failure tolerance (BFT) and eventual consistency via a predefined consensus mechanism \cite{Sunyaev2020}.
+which allows almost all the nodes in the network, to agree on an almost immutable record of transactions with Byzantine failure tolerance (BFT) and eventual consistency via a predefined consensus mechanism \cite{Sunyaev2020}.
 Blockchain is one of the most well-known DLTs which was first implemented on Bitcoin. It proposed a simple but robust way for transaction data storage without relying on trust of third parties \cite{nakamoto2008peer}.
 Blockchain also ensures improved security and anonymity of Bitcoin transactions compared with traditional electronic transactions.
 Since the introduction of Bitcoin in 2009, DLT based cryptocurrencies have made a great impact on financial sectors. Later on people also discovered that the usefulness of DLTs is beyond exchange of currencies and
 significant adoption of DLTs were made in many other industries for other different services.
-Namecoin is the first \texttt{altcoin}\footnote{Altcoin: any cryptocurrencies that are not Bitcoin.} for being the first to create its own blockchain separate from Bitcoin's \cite{kalodner2015empirical}.
+Namecoin is the first altcoin\footnote{Altcoin: any cryptocurrencies that are not Bitcoin.} for being the first to create its own blockchain separate from Bitcoin's \cite{kalodner2015empirical}.
 And its functionalities are not limited to financial transactions.
 The creation of Namecoin was inspired by the idea of BitDNS \cite{merited2010bitdns} and for establishing a decentralized domain name looking up system.
 
 
-The Internet today is a widespread information infrastructure and its history can date back to 1970s, when \texttt{ARPANET}\footnote{ARPANET: Advanced Research Projects Agency Network.
+The Internet today is a widespread information infrastructure and its history can date back to 1970s, when ARPANET\footnote{ARPANET: Advanced Research Projects Agency Network.
     The first wide-area packet-switching network with distributed control originally established by United States Department of Defense.} was developed.
 For most of the current Internet applications, data is stored in a centralized manner and users don't really own data by themselves. As shown in figure~\ref{fig:traditional_internet},
 if users want to do actions like checking their emails or browse the content of a website, they need to connect to the web servers via the Internet with web browsers, then the web servers retrieves the data from the database and then send it back to users.
@@ -33,8 +33,8 @@ Usually users' data is hidden behind service providers' application code. This k
 
 Since the early Internet, hosts in the network were assigned names for more convenient use and memorization by humans. With the growth of the network, it became impossible to store all the hosts in a single table.
 And Domain Name System (DNS) invented by Paul Mockapetris of USC/ISI permitted a scalable distributed mechanism for resolving hierarchical host names into Internet addresses \cite{leiner2009brief}.
-The coordination and management of DNS Root, IP Addressing, and other Internet protocols are in the charge of \texttt{IANA}\footnote{IANA: Internet Assigned Numbers Authority. Website: \url{https://www.iana.org}} \cite{Postel1994DomainNS}.
-These DNS root servers are central nodes of trust and failure, and cyber attack such as \texttt{DDoS}\footnote{DDoS: Distributed Denial-of-service Attack.
+The coordination and management of DNS Root, IP Addressing, and other Internet protocols are in the charge of IANA\footnote{IANA: Internet Assigned Numbers Authority. Website: \url{https://www.iana.org}} \cite{Postel1994DomainNS}.
+These DNS root servers are central nodes of trust and failure, and cyber attack such as DDoS\footnote{DDoS: Distributed Denial-of-service Attack.
     Usually the attack attempts to disrupt the normal traffic of the victim's server by a large amount of requests made by attacker devices.} may leads to the whole system taken down.
 It is reported that 13 root servers were under DDoS attack on March 21st, 2002. Fortunately the attack only lasted for one hour and didn't cause severe damage \cite{mcguire2002attack}.
 These central points may also be exploited and misleading users into connecting to malicious attack like the incident of Turkish fake site certs \cite{rosenblatt_2013}.
@@ -57,16 +57,16 @@ Domain Name System containing central nodes like DNS root servers are vulnerable
 Distributed ledger technology such as blockchain can enhance security and data integrity of IoT services. 
 However, many of the current DLTs are based on Proof-of-Work (PoW) consensus mechanism \cite{10.1145/2976749.2978341}, which requires very strong computing power and large energy consumption for solving hash computational puzzles.
 These mechanisms are not suitable for IoT devices that have poor computational power and strict energy consumption limitation. Transaction fees paid to the miners in the network caused an extra cost for the service. 
-DLTs like Bitcoin blockchain are also facing problems like low \texttt{TPS}\footnote{TPS: Transaction Per Second. The approximate average TPS of Bitcoin blockchain is around 5.}, bad scalability, etc.
+DLTs like Bitcoin blockchain are also facing problems like low TPS\footnote{TPS: Transaction Per Second. The approximate average TPS of Bitcoin blockchain is around 5.}, bad scalability, etc.
 They are not suitable for IoT service scenarios like sending large amount of micro-transactions in a short period of time. We wish to re-decentralize the current Internet service via distributed ledger technology for better security and data integrity.
 We also require the DLT used should be feeless, lightweight, and scalable which can support the use cases of IoT services.
 
 
 \begin{onehalfspace}
 \end{onehalfspace}
-\noindent\textbf{Contribution.} We introduce the design and implementation of Vivian, a global naming and storage system secured by IOTA Tangle distributed ledger. 
+\noindent\textbf{Contribution.} We introduce the design and implementation of Vivian, a global naming and storage system secured by IOTA Tangle distributed ledger \cite{popov2018tangle}. 
 It is a new decentralized Public Key infrastructure (PKI) system that enables users to register human-readable and unique domain name with binding information. 
 By using IOTA Tangle DLT, no central trust points are needed and users can control their own data. 
 Peer-to-peer network based on Kademlia DHT and mDNS peer discovery, and Gossip protocol ensures secure data sharing among nodes in the network.
-IOTA Tangle is a directed-acyclic-graph (DAG) based distributed ledger which performs better scalability than traditional blockchains. There is no miner involved in the network so no transaction fee is needed.
+IOTA Tangle is a directed-acyclic-graph (DAG)\footnote{Directed-acyclic-graph (DAG): a directed graph with no directed cycles. It is a directed graph, which means each edge has an orientation, from one vertex to another. However, no path in the graph forms a circle.} based distributed ledger which performs better scalability than traditional blockchains. There is no miner involved in the network so no transaction fee is needed.
 The whole system is lightweight and enables the possibility of building decentralized IoT applications.

@@ -64,4 +64,37 @@ A.~Gervais, G.~O. Karame, K.~W\"{u}st, V.~Glykantzis, H.~Ritzdorf, and
   Communications Security}, CCS '16, (New York, NY, USA), p.~3–16,
   Association for Computing Machinery, 2016.
 
+\bibitem{popov2018tangle}
+S.~Popov, ``The tangle,'' {\em White paper}, vol.~1, p.~3, 2018.
+
+\bibitem{Yaga2018BlockchainTO}
+D.~Yaga, P.~Mell, N.~Roby, and K.~Scarfone, ``Blockchain technology overview,''
+  {\em arXiv: Cryptography and Security}, 2018.
+
+\bibitem{merkle1980protocols}
+R.~C. Merkle, ``Protocols for public key cryptosystems,'' in {\em 1980 IEEE
+  Symposium on Security and Privacy}, pp.~122--122, IEEE, 1980.
+
+\bibitem{sedlmeir2020energy}
+J.~Sedlmeir, H.~U. Buhl, G.~Fridgen, and R.~Keller, ``The energy consumption of
+  blockchain technology: beyond myth,'' {\em Business \& Information Systems
+  Engineering}, vol.~62, no.~6, pp.~599--608, 2020.
+
+\bibitem{zhou2020solutions}
+Q.~Zhou, H.~Huang, Z.~Zheng, and J.~Bian, ``Solutions to scalability of
+  blockchain: A survey,'' {\em IEEE Access}, vol.~8, pp.~16440--16455, 2020.
+
+\bibitem{popov2019iota}
+S.~Popov and Q.~Lu, ``Iota: feeless and free,'' {\em IEEE Blockchain Technical
+  Briefs}, 2019.
+
+\bibitem{tennant2017improving}
+L.~Tennant, ``Improving the anonymity of the iota cryptocurrency,'' 2017.
+
+\bibitem{buchmann2008post}
+J.~Buchmann and J.~Ding, {\em Post-Quantum Cryptography: Second International
+  Workshop, PQCrypto 2008 Cincinnati, OH, USA October 17-19, 2008 Proceedings},
+  vol.~5299.
+\newblock Springer Science \& Business Media, 2008.
+
 \end{thebibliography}
