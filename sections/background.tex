@@ -42,7 +42,7 @@ IOTA Tangle is a new type of DLT addressing solving the problems above for IoT s
     \item \textbf{High scalability.} Directed-acyclic-graph structured Tangle ledger enables its high scalability. Serguei Popov has analyzed the performances of the system under two different regimes: low load and high load in the article \textit{The Tangle} \cite{popov2018tangle} In high load regime when more new tips\footnote{Tip: every new (unconfirmed) transaction is known as a tip.} are attached to Tangle, the typical time of a tip being approved is reduced.
           So the larger the scale of the network, the more efficient it will be.
     \item \textbf{Feeless \& Environmentally Friendly.} In a DLT network like Bitcoin, we need to pay transaction fees to the miners for rewarding them wrapping our transactions to the block and conducting PoW computations. Transaction fees are considered part of the incentive for nodes to support the network. In IOTA Tangle, however, PoW consensus and miners are removed \cite{popov2019iota}. So it is more economical and environmentally Friendly to use Tangle for sending transactions.
-    \item \textbf{Quantum Computation Resistance.} IOTA Tangle uses post-quantum cryptography for securing data on the ledger \cite{tennant2017improving}. For instance, IOTA uses Winternitz One-Time Signature (WOTS), which is promising to be resistant to quantum computers \cite{buchmann2008post} as a signature scheme protocol.
+    \item \textbf{Quantum Robust Cryptography.} IOTA Tangle uses post-quantum cryptography for securing data on the ledger \cite{tennant2017improving}. For instance, IOTA uses Winternitz One-Time Signature (WOTS), which is promising to be resistant to quantum computers \cite{buchmann2008post} as a signature scheme protocol.
     \item \textbf{Lightweight.} IOTA node applications like GoHornet\footnote{GoHornet: IOTA full node software built in Go. Github source code: https://github.com/gohornet/hornet} is lightweight and can be easily installed and run on low-end devices such as Raspberry Pi 4.
 \end{enumerate}
 
@@ -72,8 +72,41 @@ Zooko's Triangle has been squared by distributed ledger technology \cite{swartz_
 
 Blockstack is a decentralized public key infrastructure (PKI) service built on Bitcoin for building a decentralized Internet \cite{ali2017blockstack}.
 The implementation of its naming system is based on the definition of a state machine and rules for state transitions on its virtualchains \cite{nelson2016extending, ali2016blockstack}.
-In the design of Vivian's naming system, we referenced the ideas from Blockstack and Namecoin. 
+In the design of Vivian's naming system, we referenced the ideas from Blockstack and Namecoin.
 
 \subsection{P2P Network}
 
-In conclusion, peer-to-peer (P2P) networks are distributed networks in which participants provide service and content that can be accessed by other peers directly without passing through intermediate entities by shared hardware resources \cite{990434}. In a P2P network, all the peers are equally privileged, equipotent nodes that forming the network \cite{nemat2011taking}. Unlike the client-server model, a peer plays the roles of suppliers and consumers of the sources at the same time.
+In conclusion, peer-to-peer (P2P) networks are distributed networks in which participants provide service and content that can be accessed by other peers directly without passing through intermediate entities by shared hardware resources \cite{990434}.
+In a P2P network, all the peers are equally privileged, equipotent nodes that forming the network \cite{nemat2011taking}. Unlike the client-server model, a peer plays the roles of suppliers and consumers of the sources at the same time.
+
+\subsubsection{Peer Discovery}
+In a P2P network, resources like shared files are stored on different servers in a distributed way.
+In normal client-server model, if a client wants to find another node or specific resources in the network, it usually sends requests to the central servers for targets' information.
+In the original implementation in BitTorrent \cite{bram_2008}, a well-known P2P file sharing protocol, tracker servers keep the global registry of all the downloaders and seeds of the corresponding files \cite{pouwelse2005bittorrent}.
+When the trackers are crashed or taken down, peers will not be able to connect with other peers and retrieve the files successfully. Later on a decentralized approach for finding other peers has been come up with: Distributed Hash Table (DHT).
+In Vivian, we use \textbf{Kademlia Distributed Hash Table (Kad-DHT)} \cite{maymounkov2002kademlia} for peer discovery. In Kademlia, DHT is used for storing the resources location in the network. Every node and key has a unique ID (usually 160 bits). 
+And each value is stored at the nodes whose ID are closest to the key ID. The distance between every two nodes are calculated as exclusive or (XOR) of the two nodes' IDs. 
+When searching through n nodes in the system, Kad-DHT only needs to contact $O\log (n)$ nodes.
+
+\begin{figure*}[t]
+    \centering
+    \begin{subfigure}[t]{0.39\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,trim={0 0 0.5cm 0},clip]{figs/kad_k_bucket.png}
+        \caption{All nodes}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.6\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,trim={0 -2cm 0 0},clip]{figs/kad_binary_tree.png}
+        \caption{Binary tree based on node ID}
+    \end{subfigure}
+    \caption{Kademlia DHT. In this example, node ID is 6 bits, and routing table size is 64. Originating the look-up at Node 60 (111100), the k-buckets for it is [(1, 4, 5, 6), (34, 43), (49)] when k = 4 and alpha = 3.}
+    \label{fig:kad_dht}
+\end{figure*}
+
+Another peer discovery method used in Vivian is \textbf{Multicast DNS (mDNS)} \cite{cheshire2013multicast}. In mDNS protocol, a device in the local area network broadcasts message to all the other devices in the network to tell them its identity and address. The other devices which enable mDNS will respond corresponding message after receiving the broadcast message.
+
+\subsubsection{Peer Communication}
+
+Nodes in Vivian use \textbf{Gossip Protocol} \cite{10.1145/41840.41841} for dissemination of information such as naming key-value bindings. It is a eventual consistency algorithm based on the way of epidemic spreads. 
+Gossip protocol has advantages like simple, highly scalable, faut-tolerant, and decentralized. Many platforms such as Redis Cluster,Consul, Apache Cassandra, and Bitcoin are using this protocol.

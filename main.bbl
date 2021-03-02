@@ -131,4 +131,30 @@ R.~{Schollmeier}, ``A definition of peer-to-peer networking for the
 R.~Nemat, ``Taking a look at different types of e-commerce,'' {\em World
   Applied Programming}, vol.~1, no.~2, pp.~100--104, 2011.
 
+\bibitem{bram_2008}
+B.~Cohen, ``The bittorrent protocol specification.''
+  \url{https://www.bittorrent.org/beps/bep_0003.html}, Jan 2008.
+\newblock [Online; accessed 2-Mar-2021].
+
+\bibitem{pouwelse2005bittorrent}
+J.~Pouwelse, P.~Garbacki, D.~Epema, and H.~Sips, ``The bittorrent p2p
+  file-sharing system: Measurements and analysis,'' in {\em International
+  Workshop on Peer-to-Peer Systems}, pp.~205--216, Springer, 2005.
+
+\bibitem{maymounkov2002kademlia}
+P.~Maymounkov and D.~Mazieres, ``Kademlia: A peer-to-peer information system
+  based on the xor metric,'' in {\em International Workshop on Peer-to-Peer
+  Systems}, pp.~53--65, Springer, 2002.
+
+\bibitem{cheshire2013multicast}
+S.~Cheshire and M.~Krochmal, ``Multicast dns,'' tech. rep., RFC 6762, February,
+  2013.
+
+\bibitem{10.1145/41840.41841}
+A.~Demers, D.~Greene, C.~Hauser, W.~Irish, J.~Larson, S.~Shenker, H.~Sturgis,
+  D.~Swinehart, and D.~Terry, ``Epidemic algorithms for replicated database
+  maintenance,'' in {\em Proceedings of the Sixth Annual ACM Symposium on
+  Principles of Distributed Computing}, PODC '87, (New York, NY, USA),
+  p.~1–12, Association for Computing Machinery, 1987.
+
 \end{thebibliography}
