@@ -1,7 +1,7 @@
 \section{Introduction}
 \label{sec:introduction}
 
-A distributed ledger is a database that tolerates nodes with malicious intentions in a distributed manner.
+A distributed ledger (DL) is a database that tolerates nodes with malicious intentions in a distributed manner.
 And distributed ledger technology (DLT) enables the realization and operation of distributed ledgers,
 which allows almost all the nodes in the network, to agree on an almost immutable record of transactions with Byzantine failure tolerance (BFT) and eventual consistency via a predefined consensus mechanism \cite{Sunyaev2020}.
 Blockchain is one of the most well-known DLTs which was first implemented on Bitcoin. It proposed a simple but robust way for transaction data storage without relying on the trust of third parties \cite{nakamoto2008peer}.
@@ -15,7 +15,7 @@ The creation of Namecoin was inspired by the idea of BitDNS \cite{merited2010bit
 
 The Internet today is a widespread information infrastructure and its history can date back to 1970s when ARPANET\footnote{ARPANET: Advanced Research Projects Agency Network.
     The first wide-area packet-switching network with distributed control originally established by the United States Department of Defense.} was developed.
-For most of the current Internet applications, data is stored in a centralized manner and users do not own data by themselves. As shown in figure~\ref{fig:traditional_internet},
+For most of the current Internet applications, data is stored in a centralized manner and users do not own data by themselves. As shown in Fig~\ref{fig:traditional_internet},
 if users want to do actions like checking their emails or browse the content of a website, they need to connect to the web servers via the Internet with web browsers, then the web servers retrieve the data from the database and then send it back to users.
 Usually, users' data is hidden behind service providers' application code. This kind of arrangement has been very successful as it is easy to implement. However, it is not ideal since:
 \begin{itemize}
@@ -26,7 +26,7 @@ Usually, users' data is hidden behind service providers' application code. This 
 \end{itemize}
 
 \begin{figure}[h]
-    \includegraphics[width=0.45\textwidth,trim={-1cm 0 0.25cm 0},clip]{figs/traditional_internet.pdf}
+    \includegraphics[width=0.45\textwidth,trim={-1cm -1cm 0.25cm -0.5cm},clip]{figs/traditional_internet.pdf}
     \caption{User data arrangement traditional (centralized) Internet application}
     \label{fig:traditional_internet}
 \end{figure}
@@ -40,23 +40,23 @@ It is reported that 13 root servers were under DDoS attack on March 21st, 2002. 
 These central points may also be exploited and misleading users into connecting to malicious attacks like the incident of Turkish fake site certs \cite{rosenblatt_2013}.
 
 
-Internet-of-Things (IoT) refers to \textit{"physical or virtual objects which connect to the Internet and has the ability to communicate with human users or other objects"} \cite{6978614}.
+Internet-of-Things (IoT) refers to \textit{``physical or virtual objects which connect to the Internet and has the ability to communicate with human users or other objects"} \cite{6978614}.
 These devices such as smart webcam and wearable health monitors are widely used in our daily life.
 It is estimated that there will be approximately 30.9 billion active IoT device connections installed worldwide by 2021 \cite{statista_2021}.
 Due to the heterogeneity and complexity of IoT devices, their security and privacy issues are becoming more and more severe \cite{6978614}.
 And with the increasing number of devices connected to the network, the load of centralized servers for handling the connection will become much higher.
-DLT supported IoT has been created for addressing the challenges like security, data integrity and reliability, and secured P2P sharing. 
+DLT supported IoT has been created for addressing the challenges like security, data integrity and reliability, and secured P2P sharing.
 It is a new decentralized and distributed solution to IoT services and enables the opportunity for developing new and creative applications and business models in vertical domains, e.g., from healthcare to supply chain, energy industry, and smart manufacturing \cite{Farahani2020TheCO}.
 
 
 \begin{onehalfspace}
 \end{onehalfspace}
-\noindent\textbf{Motivation.} Many data management issues like security, integrity, access control have been exposed from the centralized data model of the traditional Internet. 
+\noindent\textbf{Motivation.} Many data management issues like security, integrity, access control have been exposed from the centralized data model of the traditional Internet.
 When accessing web services, user data control is maintained by service vendors rather than users themselves.
-Domain Name System containing central nodes like DNS root servers are vulnerable to cyber attacks such as DDoS. 
-Distributed ledger technology such as blockchain can enhance the security and data integrity of IoT services. 
+Domain Name System containing central nodes like DNS root servers are vulnerable to cyber attacks such as DDoS.
+Distributed ledger technology such as blockchain can enhance the security and data integrity of IoT services.
 However, many of the current DLTs are based on Proof-of-Work (PoW) consensus mechanism \cite{10.1145/2976749.2978341}, which requires very strong computing power and large energy consumption for solving hash computational puzzles.
-These mechanisms are not suitable for IoT devices that have poorer computational power and strict energy consumption limitation. Transaction fees paid to the miners in the network caused an extra cost for the service. 
+These mechanisms are not suitable for IoT devices that have poorer computational power and strict energy consumption limitation. Transaction fees paid to the miners in the network caused an extra cost for the service.
 DLTs like Bitcoin blockchain are also facing problems like low TPS\footnote{TPS: Transaction Per Second. The approximate average TPS of Bitcoin blockchain is around 5.}, bad scalability, etc.
 They are not suitable for IoT service scenarios like sending a large number of micro-transactions in a short period of time. We wish to re-decentralize the current Internet service via distributed ledger technology for better security and data integrity.
 We also require the DLT used should be feeless, lightweight, and scalable which can support the use cases of IoT services.
@@ -64,9 +64,9 @@ We also require the DLT used should be feeless, lightweight, and scalable which 
 
 \begin{onehalfspace}
 \end{onehalfspace}
-\noindent\textbf{Contribution.} We introduce the design and implementation of Vivian, a global naming and storage system secured by IOTA Tangle distributed ledger \cite{popov2018tangle}. 
-It is a new decentralized Public Key infrastructure (PKI) system that enables users to register human-readable and unique domain names with the binding information. 
-By using IOTA Tangle DLT, no central trust points are needed and users can control their own data. 
+\noindent\textbf{Contribution.} We introduce the design and implementation of Vivian, a global naming and storage system secured by IOTA Tangle distributed ledger \cite{popov2015tangle}.
+It is a new decentralized Public Key Infrastructure (PKI) system that enables users to register human-readable and unique domain names with the binding information.
+By using IOTA Tangle DLT, no central trust points are needed and users can control their own data.
 Peer-to-peer network based on Kademlia DHT and mDNS peer discovery, and Gossip protocol ensures secure data sharing among nodes in the network.
 IOTA Tangle is a directed-acyclic-graph (DAG)\footnote{Directed-acyclic-graph (DAG): a directed graph with no directed cycles. It is a directed graph, which means each edge has an orientation, from one vertex to another. However, no path in the graph forms a circle.} based distributed ledger which performs better scalability than traditional blockchains. There is no miner involved in the network so no transaction fee is needed.
 The whole system is lightweight and enables the possibility of building decentralized IoT applications.
