@@ -12,9 +12,16 @@
 \usepackage{nohyperref}
 \usepackage{url}
 \usepackage{setspace}
+\usepackage[utf8]{inputenc}
+
+
+
+
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
 
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\pagenumbering{arabic}
 
 \begin{document}
 
@@ -74,20 +81,29 @@
 
 \maketitle
 
+\thispagestyle{plain}
+\pagestyle{plain}
+
 \begin{abstract}
 
     With the booming of distributed ledger technology (DLT) such as blockchain, many previous IT architectures can have alternative decentralized approaches for more secure, transparent, and immutable data storage.
-    In this paper, we present the design and implementation of Vivian, a new decentralized global naming and storage system based on IOTA Tangle for re-decentralizing the current Internet service and building decentralized applications.
-    Unlike the traditional Domain name System (DNS), trust points like DNS root servers are removed and critical data bindings are secured by the distributed ledger. All the nodes in the system form a peer-to-peer (P2P) network for data sharing.
-    The P2P network is established through Kademlia DHT, mDNS peer discovery and it achieves eventually consistency of data is by Gossip protocol.
-    In this system, users can own their application data directly rather than relying on the central authorities. The system has no single point failure and the nodes in the network do not need to trust each other.
-    By using IOTA Tangle, a directed-acyclic-graph (DAG) structure distributed ledger, the system inherits its scalable, lightweight, and feeless characteristics and enables the possibility of application in Internet-of-Thing (IoT) services.
+    In this paper, we present the design and implementation of Vivian, a new decentralized global naming and storage system based on IOTA Tangle distributed ledger for re-decentralizing the current Internet service and building decentralized applications.
+    The system has no single point of failure and the nodes in the network do not need to trust each other.
+    Unlike the traditional Domain name System (DNS), trust points like DNS root servers are removed and critical data bindings are secured by the distributed ledger. All the nodes in the system form a peer-to-peer (P2P) network for user quires' routing.
+    The P2P network is established through peer discovery protocols such as mDNS, Kademlia DHT and peers exchange data and achieve eventual consistency via Gossip protocol.
+    We also provide a decentralized storage system which can hold user data securely without the control of central trust parties or revealing information to storage providers.
+    By using IOTA Tangle, a directed-acyclic-graph (DAG) distributed ledger, the system inherits its scalable, lightweight, and feeless characteristics and most IoT devices have enough computational power to sign and send transactions.
+    This extends the usage of Vivian to Internet-of-Thing (IoT) services for decentralizing IoT networks and enhancing IoT data security and privacy.
 
 \end{abstract}
 
 \input{sections/introduction.tex}
 \input{sections/background.tex}
 \input{sections/design.tex}
+\input{sections/implementation.tex}
+\input{sections/discussion.tex}
+\input{sections/application.tex}
+\input{sections/conclusion.tex}
 
 \newpage
 

@@ -157,4 +157,28 @@ A.~Demers, D.~Greene, C.~Hauser, W.~Irish, J.~Larson, S.~Shenker, H.~Sturgis,
   Principles of Distributed Computing}, PODC '87, (New York, NY, USA),
   p.~1–12, Association for Computing Machinery, 1987.
 
+\bibitem{Baek2019IOTAAC}
+B.~Baek, ``Iota: A cryptographic perspective,'' 2019.
+
+\bibitem{benet2014ipfs}
+J.~Benet, ``Ipfs-content addressed, versioned, p2p file system,'' {\em arXiv
+  preprint arXiv:1407.3561}, 2014.
+
+\bibitem{pedersen1991non}
+T.~P. Pedersen, ``Non-interactive and information-theoretic secure verifiable
+  secret sharing,'' in {\em Annual international cryptology conference},
+  pp.~129--140, Springer, 1991.
+
+\bibitem{chang2008bigtable}
+F.~Chang, J.~Dean, S.~Ghemawat, W.~C. Hsieh, D.~A. Wallach, M.~Burrows,
+  T.~Chandra, A.~Fikes, and R.~E. Gruber, ``Bigtable: A distributed storage
+  system for structured data,'' {\em ACM Transactions on Computer Systems
+  (TOCS)}, vol.~26, no.~2, pp.~1--26, 2008.
+
+\bibitem{farahani2021convergence}
+B.~Farahani, F.~Firouzi, and M.~Luecking, ``The convergence of iot and
+  distributed ledger technologies (dlt): Opportunities, challenges, and
+  solutions,'' {\em Journal of Network and Computer Applications}, vol.~177,
+  p.~102936, 2021.
+
 \end{thebibliography}
