@@ -1,10 +1,3 @@
-\begin{figure*}[ht]
-    \centering
-    \includegraphics[width=0.8\textwidth,trim={0 0 0 0},clip]{figs/vivian_architecture.pdf}
-    \caption{Vivian Architecture}
-    \label{fig:vivian_architecture}
-\end{figure*}
-
 \section{System Design}
 \label{sec:design}
 
@@ -21,7 +14,7 @@ In designing Vivian, we want the system to achieve the following properties:
 The overall architecture of Vivian can be divided into three layers: \textbf{Tangle DL layer, Peer Network layer, and Storage layer}.
 Tangle distributed ledger is used as storage intermediate of critical data binding and for consensus of the order of the system operations.
 Nodes in the peer network layer are equally privileged, equipotent peers which perform the live listening to transactions on Tangle, parsing the operations, storing naming key-value pairs, and routing for users to find the information of the names.
-Storage layer is an alternative layer for users to store the name pointing data.
+Storage layer is an alternative layer for users to store the name pointing data. Overview of the architecture is shown in Fig~\ref{fig:vivian_architecture}.
 
 \begin{figure}[h]
     \centering
@@ -44,7 +37,7 @@ For the effectiveness of \texttt{NAME\_NEW} and front-running prevention. The ga
 
 After a name becomes registered, the owner can send an update transaction for updating the name-value binding. He/She can also transfer the name to others by sending the transfer transaction to change the address that signs subsequent transactions. Revoke operation is used for disabling any further operations on the name. After that, the name-binding value cannot be changed until expiration.
 
-A name in Vivian is not permanent and has a certain time for expiration. In Namecoin, the original time period for a name to expire is 36,000 blocks (around 250 days).
+A name in Vivian is not permanent and has a certain time for expiration. In Namecoin, the original period for a name to expire is 36,000 blocks (around 250 days).
 It means if a name hasn't been mentioned in \texttt{NAME\_UPDATE} or \texttt{NAME\_FIRSTUPDATE} in 36,000 blocks, it becomes absent again \cite{kalodner2015empirical}.
 In Vivian, the expiration time is counted by the timestamp of the register transaction. Besides, users can send the transaction for renewing their names before expiration.
 
@@ -52,12 +45,12 @@ By using Tangle DL, most IoT devices have enough computational power to sign and
 
 \subsection{Peer Network}
 Nodes in the peer network form a routing layer for users to find the binding value of names.
-Every node will consistently listen to all the transactions on IOTA Tangle and filter the transactions that relates to Vivian naming operations.
-Then it parse the transaction and update the name key-value bindings in its local database.
+Every node will consistently listen to all the transactions on IOTA Tangle and filter the transactions that relate to Vivian naming operations.
+Then it parses the transaction and updates the name key-value bindings in its local database.
 In the local database, basically, a node only needs to record the registered names and the address and hash of the latest transactions that modify a name binding value. A node can also cache the binding values of the names.
 When a node discovers a change of a name, e.g., a new name has been registered or a name's binding value has changed, it will record the change to the change list and periodically fan-out the change list to other k random neighbors via Gossip protocol \cite{10.1145/41840.41841}.
 If a node receives the change list from another node, it will compare the changes with items in the local database. If a difference is found, it will then choose the records with the latest transaction (through timestamp comparison) and validate it by checking the transaction on Tangle DL. If the change is validated, the node then updates the change to its local database and appends the change to its change list.
-If a user wants to get the binding value of a name, he/she can connect to one or more nodes in the network and query for name information. The node should return the name, the recorded transaction hash and cached binding value (for fast access if available). The end-user does not need to trust the node as the data integrity can be validated on Tangle DL via transaction hash.
+If a user wants to get the binding value of a name, he/she can connect to one or more nodes in the network and query for name information. The node should return the name, the recorded transaction hash, and cached binding value (for fast access if available). The end-user does not need to trust the node as the data integrity can be validated on Tangle DL via transaction hash.
 The whole peer network is established via Kademlia Distributed Hash Table (Kad-DHT) \cite{maymounkov2002kademlia} and new nodes can join the network. Once a new node joins the network, it can construct all the naming information by iterate all the transactions on Tangle DL.
 
 \begin{figure}[h]
@@ -83,7 +76,14 @@ Through peer network routing layer, users can query the value of a name without 
 
 \subsection{Storage System}
 There is no restriction on what type of data a name should map to. The storage layer provides an alternative way for binding large files to the names.
-Due to data size limitation of Tangle transaction and complexity for checking the message content of the transaction, actual data are stored on the storage layer instead of Tangle DL.
+Due to the data size limitation of Tangle transaction and complexity for checking the message content of the transaction, actual data are stored on the storage layer instead of Tangle DL.
 Users can choose to use InterPlanetary File System (IPFS) \cite{benet2014ipfs}, a P2P decentralized file system, to save their files or traditional storage backends such as Amazon S3, Azure Blob, Google Cloud, etc.
 The design goals are to let the users own the access right of their data, users do not need to trust the storage layer and can verify the data integrity, and the other third parties like the storage providers cannot tamper with the data.
 Possible implementations will be discussed in Section~\ref{sec:implementation}.
+
+\begin{figure*}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth,trim={0 0 0 0},clip]{figs/vivian_architecture.pdf}
+    \caption{Vivian Architecture}
+    \label{fig:vivian_architecture}
+\end{figure*}

@@ -2,7 +2,7 @@
 \label{sec:background}
 
 \subsection{Blockchain and Tangle (DAG)}
-Blockchain DLT became widely known in 2009 with the launch of Bitcoin network.
+Blockchain DLT became widely known in 2009 with the launch of the Bitcoin network.
 Participants in the network can validate and verify the transactions independently, without relying on central trust parties.
 Additionally, Blockchain is usually maintained and managed by a distributed group of participants independently.
 These along with its cryptographic mechanisms ensures the data recorded on the ledger immutable \cite{Yaga2018BlockchainTO}.
@@ -28,8 +28,8 @@ In the original Bitcoin whitepaper \cite{nakamoto2008peer}, Satoshi Nakamoto lis
 All the nodes listen to the transactions broadcast to the network and each node collects new transactions for generating a new block.
 Then each node will do proof-of-work and broadcast the block to the network once it finds the solution for other nodes' validation.
 However, in the real case, almost all the transaction wrapping and PoW are finished by specific miners in the network. Miners also require transaction fees for the reward of doing these jobs.
-The increasing PoW complexity makes it nearly impossible to gain profit from mining Bitcoin with general PC hardware. Instead, dedicated miners have to use the equipments like ASIC\footnote{ASIC: application-specific integrated circuit. It is the integrated circuit designed for a specific use case. Bitcoin ASIC chip can only handle computing tasks for Bitcoin mining, and cannot be used for any other tasks.} specifically for the mining algorithms.
-It is a potential hazard that the blockchain network will be centralized and controlled by the parties that own the most of these ``mining rigs". In addition, blockchains relying on PoW are consuming massive energy for their operations \cite{sedlmeir2020energy}. According to CBECI\footnote{CBECI: Cambridge Bitcoin Electricity Consumption Index. Website: https://cbeci.org/}, only Bitcoin network consumes approximately 130.51 TWh electricity per year, which is far more than the annual electricity consumption of some countries like Ukraine and Argentina. Carbon dioxide emissions caused by these PoW blockchains will cause environmental issues like global warming.
+The increasing PoW complexity makes it nearly impossible to gain profit from mining Bitcoin with general PC hardware. Instead, dedicated miners have to use equipments like ASIC\footnote{ASIC: application-specific integrated circuit. It is the integrated circuit designed for a specific use case. Bitcoin ASIC chip can only handle computing tasks for Bitcoin mining, and cannot be used for any other tasks.} specifically for the mining algorithms.
+It is a potential hazard that the blockchain network will be centralized and controlled by the parties that own most of these ``mining rigs". Besides, blockchains relying on PoW are consuming massive energy for their operations \cite{sedlmeir2020energy}. According to CBECI\footnote{CBECI: Cambridge Bitcoin Electricity Consumption Index. Website: https://cbeci.org/}, only Bitcoin network consumes approximately 130.51 TWh electricity per year, which is far more than the annual electricity consumption of some countries like Ukraine and Argentina. Carbon dioxide emissions caused by these PoW blockchains will cause environmental issues like global warming.
 
 
 Transaction throughput and transaction confirmation latency are the two most critical performance issues of blockchain technology \cite{zhou2020solutions}.
@@ -41,12 +41,12 @@ IOTA Tangle is a DAG\footnote{a directed graph with no directed cycles. It is a 
 \begin{enumerate}
     \item \textbf{High scalability.} Directed-acyclic-graph structured Tangle ledger enables its high scalability. Serguei Popov has analyzed the performances of the system under two different regimes: low load and high load in the article \textit{The Tangle} \cite{popov2015tangle} In high load regime when more new tips\footnote{Tip: every new (unconfirmed) transaction is known as a tip.} are attached to Tangle, the typical time of a tip being approved is reduced.
           So the larger the scale of the network, the more efficient it will be.
-    \item \textbf{Feeless \& Environmentally Friendly.} In Bitcoin network, we need to pay transaction fees to the miners for rewarding them wrapping our transactions to the block and conducting PoW computations. Transaction fees are considered part of the incentive for nodes to support the network. In IOTA Tangle, however, PoW consensus and miners are removed \cite{popov2019iota}. So it is more economical and environmentally friendly to use Tangle for sending transactions.
+    \item \textbf{Feeless \& Environmentally Friendly.} In Bitcoin network, we need to pay transaction fees to the miners for rewarding them wrapping our transactions to the block, and conducting PoW computations. Transaction fees are considered part of the incentive for nodes to support the network. In IOTA Tangle, however, PoW consensus and miners are removed \cite{popov2019iota}. So it is more economical and environmentally friendly to use Tangle for sending transactions.
     \item \textbf{Quantum Robust Cryptography.} IOTA Tangle uses post-quantum cryptography for securing data on the ledger \cite{tennant2017improving}. For instance, IOTA uses Winternitz One-Time Signature (WOTS), which is promising to be resistant to quantum computers \cite{buchmann2008post} as a signature scheme protocol.
     \item \textbf{Lightweight.} IOTA node applications like GoHornet\footnote{GoHornet: IOTA full node software built in Go. Github source code: https://github.com/gohornet/hornet} are lightweight and can be easily installed and run on low-end devices such as Raspberry Pi 4.
 \end{enumerate}
 
-These characteristics are very crucial for IoT applications and favorable for implementation of Vivian.
+These characteristics are very crucial for IoT applications and favorable for the implementation of Vivian.
 
 
 \subsection{Decentralized Naming System}
@@ -54,7 +54,7 @@ Before distributed ledger technology came into being, building a decentralized n
 
 \begin{enumerate}
     \item \textbf{Human-meaningful.} The names the system provides should be meaningful and easy to memorize, e.g. bitcoin.org. Hash values like \texttt{764569e58f53} are obviously not meaningful and hard for people to memorize.
-    \item \textbf{Secure.} The names should return the correct binding values. Damage caused by malicious entities should be as low  as possible.
+    \item \textbf{Secure.} The names should return the correct binding values. Damage caused by malicious entities should be as low as possible.
     \item \textbf{Decentralized.} No central authority controls the system. Names can be chosen by users at the edge of the network rather than representative central parties.
 \end{enumerate}
 
@@ -77,15 +77,15 @@ In the design of Vivian's naming system, we referenced the ideas from Blockstack
 \subsection{P2P Network}
 
 In conclusion, peer-to-peer (P2P) networks are distributed networks in which participants provide services and contents that can be accessed by other peers directly without passing through intermediate entities by shared hardware resources \cite{990434}.
-In a P2P network, all the peers are equally privileged, equipotent nodes that forms the network \cite{nemat2011taking}. Unlike the client-server model, a peer plays the roles of suppliers and consumers of the sources at the same time.
+In a P2P network, all the peers are equally privileged, equipotent nodes that form the network \cite{nemat2011taking}. Unlike the client-server model, a peer plays the roles of suppliers and consumers of the sources at the same time.
 
 \subsubsection{Peer Discovery}
 In a P2P network, resources like shared files are stored on different servers in a distributed way.
-In normal client-server model, if a client server wants to find another node or specific resources in the network, it usually sends requests to the central servers for targets' information.
+In a normal client-server model, if a client server wants to find another node or specific resources in the network, it usually sends requests to the central servers for targets' information.
 In the original implementation in BitTorrent \cite{bram_2008}, a well-known P2P file sharing protocol, tracker servers keep the global registry of all the downloaders and seeds of the corresponding files \cite{pouwelse2005bittorrent}.
 When the trackers are crashed or taken down, peers will not be able to connect with other peers and retrieve the files successfully. After that, a decentralized approach for finding other peers has been implemented: Distributed Hash Table (DHT).
 In Vivian, we use \textbf{Kademlia Distributed Hash Table (Kad-DHT)} \cite{maymounkov2002kademlia} for peer discovery. In Kademlia, DHT is used for storing the resources location in the network. Every node and key has a unique ID (usually 160 bits).
-Each value is stored at the nodes whose ID are closest to the key ID. And the distance between every two nodes are calculated as exclusive or (XOR) of the two nodes' IDs.
+Each value is stored at the nodes whose ID are closest to the key ID. And the distance between every two nodes is calculated as exclusive or (XOR) of the two nodes' IDs.
 When searching through n nodes in the system, Kad-DHT only needs to contact $O\log (n)$ nodes.
 
 \begin{figure}[h]
@@ -107,9 +107,9 @@ When searching through n nodes in the system, Kad-DHT only needs to contact $O\l
     \label{fig:kad_dht}
 \end{figure}
 
-Another peer discovery method used in Vivian is \textbf{Multicast DNS (mDNS)} \cite{cheshire2013multicast}. In mDNS protocol, a device in the local area network broadcasts messages to all the other devices in the network to tell them its identity and address. The other devices which enable mDNS will respond the corresponding message after receiving the broadcast message.
+Another peer discovery method used in Vivian is \textbf{Multicast DNS (mDNS)} \cite{cheshire2013multicast}. In mDNS protocol, a device in the local area network broadcasts messages to all the other devices in the network to tell them its identity and address. The other devices which enable mDNS will respond with the corresponding message after receiving the broadcast message.
 
 \subsubsection{Peer Communication}
 
 Nodes in Vivian use \textbf{Gossip Protocol} \cite{10.1145/41840.41841} for the dissemination of information such as naming key-value bindings. It is an eventual consistency algorithm based on the way of epidemic spreads.
-Gossip protocol has advantages like simple, highly scalable, faut-tolerant, and decentralized. Many well-known platforms such as Redis Cluster, Consul, and Bitcoin are using this protocol.
+Gossip protocol has advantages like simple, highly scalable, fault-tolerant, and decentralized. Many well-known platforms such as Redis Cluster, Consul, and Bitcoin are using this protocol.
