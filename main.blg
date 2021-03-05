@@ -7,45 +7,45 @@ Reallocating 'name_of_file' (item size: 1) to 5 items.
 Database file #1: main.bib
 Warning--empty journal in popov2015tangle
 Warning--empty booktitle in Baek2019IOTAAC
-You've used 37 entries,
+You've used 38 entries,
             1876 wiz_defined-function locations,
-            690 strings with 9856 characters,
-and the built_in function-call counts, 9011 in all, are:
-= -- 845
-> -- 376
+            695 strings with 9970 characters,
+and the built_in function-call counts, 9187 in all, are:
+= -- 858
+> -- 384
 < -- 0
-+ -- 143
-- -- 106
-* -- 591
-:= -- 1275
-add.period$ -- 44
-call.type$ -- 37
-change.case$ -- 36
++ -- 146
+- -- 108
+* -- 601
+:= -- 1301
+add.period$ -- 45
+call.type$ -- 38
+change.case$ -- 37
 chr.to.int$ -- 0
-cite$ -- 39
-duplicate$ -- 490
-empty$ -- 915
-format.name$ -- 106
-if$ -- 2210
+cite$ -- 40
+duplicate$ -- 503
+empty$ -- 939
+format.name$ -- 108
+if$ -- 2253
 int.to.chr$ -- 0
-int.to.str$ -- 37
-missing$ -- 31
-newline$ -- 121
-num.names$ -- 37
-pop$ -- 177
+int.to.str$ -- 38
+missing$ -- 32
+newline$ -- 124
+num.names$ -- 38
+pop$ -- 184
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 307
+skip$ -- 310
 stack$ -- 0
 substring$ -- 443
-swap$ -- 175
+swap$ -- 176
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 78
-width$ -- 39
-write$ -- 350
+while$ -- 79
+width$ -- 40
+write$ -- 359
 (There were 2 warnings)

@@ -175,6 +175,10 @@ F.~Chang, J.~Dean, S.~Ghemawat, W.~C. Hsieh, D.~A. Wallach, M.~Burrows,
   system for structured data,'' {\em ACM Transactions on Computer Systems
   (TOCS)}, vol.~26, no.~2, pp.~1--26, 2008.
 
+\bibitem{singh2006eclipse}
+A.~Singh {\em et~al.}, ``Eclipse attacks on overlay networks: Threats and
+  defenses,'' in {\em In IEEE INFOCOM}, Citeseer, 2006.
+
 \bibitem{farahani2021convergence}
 B.~Farahani, F.~Firouzi, and M.~Luecking, ``The convergence of iot and
   distributed ledger technologies (dlt): Opportunities, challenges, and
